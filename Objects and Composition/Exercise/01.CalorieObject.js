@@ -1,5 +1,3 @@
-// 01. Calorie Object
-
 function calorieObject(input) {
     let result = {};
 
