@@ -1,10 +1,9 @@
 function deleteByEmail() {
     const input = document.querySelector('input[name="email"]');
-    let inputValue = input.value;
-
+    
     const rows = Array.from(document.querySelectorAll('tbody tr'));
 
-    const rowsToDelete = rows.filter(row => row.children[1].textContent === inputValue);
+    const rowsToDelete = rows.filter(row => row.children[1].textContent === input.value);
 
     if (rowsToDelete.length > 0) {
         rowsToDelete.forEach(row => row.remove());
@@ -13,5 +12,5 @@ function deleteByEmail() {
         document.getElementById('result').textContent = 'Not found.';
     }
 
-    inputValue = '';
+    input.value = '';
 }
